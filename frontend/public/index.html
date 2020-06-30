@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Client front end</h1>
+  </body>
+  <script>
+    fetch("/api")
+  .then(response => response.json())
+  .then(data => console.log(data));
+  </script>
+</html>
