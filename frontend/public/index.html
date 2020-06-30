@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <h1>Client front end</h1>
+    <h1>Frontend service</h1>
+    <button onclick="getMessage()">Request a message from backend</button>
+    <div id="results"></div>
   </body>
   <script>
+    function getMessage(){
     fetch("/api")
   .then(response => response.json())
-  .then(data => console.log(data));
+  .then(data => document.getElementById("results").innerHTML += JSON.stringify(data));}
   </script>
 </html>
